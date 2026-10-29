@@ -1,10 +1,22 @@
 {
-  inputs.baselayer-ai-wasm-demo-aarch64-darwin.url = "https://flakehub.com/f/BaseLayer-AI/baselayer-ai-wasm-demo-aarch64-darwin/0.1.17";
+  inputs = {
+    nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/*";
+  };
 
-  outputs = { self, baselayer-ai-wasm-demo-aarch64-darwin }: {
-    packages.aarch64-darwin = {
-      demo = baselayer-ai-wasm-demo-aarch64-darwin.packages.aarch64-darwin.default;
-      default = baselayer-ai-wasm-demo-aarch64-darwin.packages.aarch64-darwin.default;
+  outputs = { self, nixpkgs }: 
+    let
+      pkgs = import nixpkgs { system = "aarch64-darwin"; };
+    in {
+      packages.aarch64-darwin = {
+        default = pkgs.writeTextFile {
+          name = "readme";
+          executable = true;
+          destination = "/bin/readme";
+          text = ''
+#!${pkgs.stdenv.shell}
+cat README.md
+          '';
+       };
     };
   };
 }

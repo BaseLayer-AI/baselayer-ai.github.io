@@ -1,22 +1,5 @@
 {
   "nodes": {
-    "baselayer-ai-wasm-demo-aarch64-darwin": {
-      "inputs": {
-        "nixpkgs": "nixpkgs"
-      },
-      "locked": {
-        "lastModified": 1793299389,
-        "narHash": "sha256-xzUbosVvRefRA7ka5+y0MMet7a4Jw65wPVoiifnwsog=",
-        "rev": "2764fd343c3cfd7935e49fe320d64e7fc3ab50af",
-        "revCount": 17,
-        "type": "tarball",
-        "url": "https://api.flakehub.com/f/pinned/BaseLayer-AI/baselayer-ai-wasm-demo-aarch64-darwin/0.1.17%2Brev-2764fd343c3cfd7935e49fe320d64e7fc3ab50af/01a188f9-e035-7e91-aa29-c1938a9c4635/source.tar.gz"
-      },
-      "original": {
-        "type": "tarball",
-        "url": "https://flakehub.com/f/BaseLayer-AI/baselayer-ai-wasm-demo-aarch64-darwin/0.1.17"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1793183032,
@@ -33,7 +16,7 @@
     },
     "root": {
       "inputs": {
-        "baselayer-ai-wasm-demo-aarch64-darwin": "baselayer-ai-wasm-demo-aarch64-darwin"
+        "nixpkgs": "nixpkgs"
       }
     }
   },
