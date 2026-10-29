@@ -31,9 +31,43 @@
         "url": "https://flakehub.com/f/NixOS/nixpkgs/%2A"
       }
     },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1793183032,
+        "narHash": "sha256-56mFMf8heLNfYhcgbrh4GpN5x+G9JOfTFXZC3n6w0qM=",
+        "rev": "08d3a97586f6b6343b3b5e799980773629432610",
+        "revCount": 1017341,
+        "type": "tarball",
+        "url": "https://api.flakehub.com/f/pinned/NixOS/nixpkgs/0.2605.1017341%2Brev-08d3a97586f6b6343b3b5e799980773629432610/01a1862a-1e06-7d70-82dc-9884eae7724f/source.tar.gz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://flakehub.com/f/NixOS/nixpkgs/%2A"
+      }
+    },
+    "readme": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1793308749,
+        "narHash": "sha256-gcBXz/84QzfZg09LK8n6jG6sBFeE8hSUVMwbm4JmI6s=",
+        "owner": "BaseLayer-AI",
+        "repo": "baselayer-ai.github.io",
+        "rev": "b5c5c1cf5d9888cfa0586f5f5f446ab9eef9e89c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "BaseLayer-AI",
+        "ref": "readme",
+        "repo": "baselayer-ai.github.io",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
-        "baselayer-ai-wasm-demo-aarch64-darwin": "baselayer-ai-wasm-demo-aarch64-darwin"
+        "baselayer-ai-wasm-demo-aarch64-darwin": "baselayer-ai-wasm-demo-aarch64-darwin",
+        "readme": "readme"
       }
     }
   },
