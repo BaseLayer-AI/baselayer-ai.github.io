@@ -5,10 +5,11 @@
 
   outputs = { self, nixpkgs }: 
     let
-      pkgs = import nixpkgs { system = "aarch64-darwin"; };
-    in {
-      packages.aarch64-darwin = {
-        default = pkgs.writeTextFile {
+      aarch64-darwin = import nixpkgs { system = "aarch64-darwin"; };
+      aarch64-linux = import nixpkgs { system = "aarch64-linux"; };
+      x86_64-linux = import nixpkgs { system = "x86_64-linux"; };
+      readme = { pkgs } : 
+        pkgs.writeTextFile {
           name = "readme";
           executable = true;
           destination = "/bin/readme";
@@ -61,7 +62,10 @@ We use **Nix** because truth must be reproducible. A system that "works on my ma
 EOF
           '';
        };
-    };
-  };
+    in {
+      packages.aarch64-darwin.default  = readme { pkgs = aarch64-darwin; };
+      packages.aarch64-linux.default = readme { pkgs = aarch64-linux; };
+      packages.x86_64-linux.default = readme { pkgs = x86_64-linux; };
+   };
 }
 
