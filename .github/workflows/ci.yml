@@ -1,0 +1,16 @@
+name: ci
+on: push
+jobs:
+  macos-26:
+    runs-on: macos-26
+    steps:
+    - uses: actions/checkout@v7
+    - name: Platform
+      run: uname -a
+    - name: install nix from https://github.com/DeterminateSystems/nix-installer/releases/download/v3.24.1/nix-installer.sh
+      run: cat nix-installer.sh | sh -s -- install --no-confirm
+    - name: nix --version
+      run: nix --version
+    - name: nix run
+      run: nix run 
+
