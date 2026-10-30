@@ -3,10 +3,9 @@
   inputs.readme.url = "github:BaseLayer-AI/baselayer-ai.github.io/readme";
 
   outputs = { self, baselayer-ai-wasm-demo-aarch64-darwin, readme }: {
-    packages.aarch64-darwin = {
-      demo = baselayer-ai-wasm-demo-aarch64-darwin.packages.aarch64-darwin.default;
-      default = readme.packages.aarch64-darwin.default;
-    };
+    packages.aarch64-darwin.demo = baselayer-ai-wasm-demo-aarch64-darwin.packages.aarch64-darwin.default;
+    packages.aarch64-darwin.default = readme.packages.aarch64-darwin.default;
+    packages.aarch64-linux.default = readme.packages.aarch64-linux.default;
   };
 }
 

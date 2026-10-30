@@ -50,11 +50,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1793310488,
-        "narHash": "sha256-DyDiPHawDABzBrk6Ki/4dhjBNRAS/lKwSuy3v5xZGhg=",
+        "lastModified": 1793324272,
+        "narHash": "sha256-dJ98HZK9cYEAyr5s0wWjz6E+AWfc4inqDNk5zQgfOGc=",
         "owner": "BaseLayer-AI",
         "repo": "baselayer-ai.github.io",
-        "rev": "3d6beb952d93383eaddace1b36f19e356e4da7f8",
+        "rev": "062acab5d77860a698b2e83d39ac503ed22323a6",
         "type": "github"
       },
       "original": {
