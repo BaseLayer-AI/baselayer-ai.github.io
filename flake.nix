@@ -6,6 +6,7 @@
     packages.aarch64-darwin.demo = baselayer-ai-wasm-demo-aarch64-darwin.packages.aarch64-darwin.default;
     packages.aarch64-darwin.default = readme.packages.aarch64-darwin.default;
     packages.aarch64-linux.default = readme.packages.aarch64-linux.default;
+    packages.x86_64-linux.default = readme.packages.x86_64-linux.default;
   };
 }
 
