@@ -1,14 +1,21 @@
 {
-  description = "The BaseLayer Manifesto: Engineering for Agentic Reality";
+  description = "The BaseLayer AI Manifesto: Engineering for Agentic Reality";
 
-  inputs.baselayer-ai-wasm-demo-aarch64-darwin.url = "https://flakehub.com/f/BaseLayer-AI/baselayer-ai-wasm-demo-aarch64-darwin/0.1.17";
-  inputs.readme.url = "github:BaseLayer-AI/baselayer-ai.github.io/readme";
+  inputs = { nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/*"; };
 
-  outputs = { self, baselayer-ai-wasm-demo-aarch64-darwin, readme }: {
-    packages.aarch64-darwin.demo = baselayer-ai-wasm-demo-aarch64-darwin.packages.aarch64-darwin.default;
-    packages.aarch64-darwin.default = readme.packages.aarch64-darwin.default;
-    packages.aarch64-linux.default = readme.packages.aarch64-linux.default;
-    packages.x86_64-linux.default = readme.packages.x86_64-linux.default;
-  };
+  outputs = { self, nixpkgs }:
+    let
+      aarch64-darwin = import nixpkgs { system = "aarch64-darwin"; };
+      aarch64-linux = import nixpkgs { system = "aarch64-linux"; };
+      x86_64-linux = import nixpkgs { system = "x86_64-linux"; };
+
+      readme = { pkgs } : pkgs.writeTextFile { name = "readme"; executable = true; destination = "/bin/readme";
+        text = ''#!${pkgs.stdenv.shell}
+cat ${self}/README.md
+        '';};
+    in {
+      packages.aarch64-darwin.default = readme { pkgs = aarch64-darwin; };
+      packages.aarch64-linux.default = readme { pkgs = aarch64-linux; };
+      packages.x86_64-linux.default = readme { pkgs = x86_64-linux; };
+    };
 }
-

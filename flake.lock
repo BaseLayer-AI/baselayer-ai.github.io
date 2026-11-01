@@ -1,73 +1,22 @@
 {
   "nodes": {
-    "baselayer-ai-wasm-demo-aarch64-darwin": {
-      "inputs": {
-        "nixpkgs": "nixpkgs"
-      },
-      "locked": {
-        "lastModified": 1793299389,
-        "narHash": "sha256-xzUbosVvRefRA7ka5+y0MMet7a4Jw65wPVoiifnwsog=",
-        "rev": "2764fd343c3cfd7935e49fe320d64e7fc3ab50af",
-        "revCount": 17,
-        "type": "tarball",
-        "url": "https://api.flakehub.com/f/pinned/BaseLayer-AI/baselayer-ai-wasm-demo-aarch64-darwin/0.1.17%2Brev-2764fd343c3cfd7935e49fe320d64e7fc3ab50af/01a188f9-e035-7e91-aa29-c1938a9c4635/source.tar.gz"
-      },
-      "original": {
-        "type": "tarball",
-        "url": "https://flakehub.com/f/BaseLayer-AI/baselayer-ai-wasm-demo-aarch64-darwin/0.1.17"
-      }
-    },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1793183032,
-        "narHash": "sha256-56mFMf8heLNfYhcgbrh4GpN5x+G9JOfTFXZC3n6w0qM=",
-        "rev": "08d3a97586f6b6343b3b5e799980773629432610",
-        "revCount": 1017341,
+        "lastModified": 1793294725,
+        "narHash": "sha256-loLMnbbS4KhmG2ln9EY6f0YMNCA273Yx02oWYQ9IMeE=",
+        "rev": "6f06d204d8f2d8761d9da78778745974a3216381",
+        "revCount": 1017455,
         "type": "tarball",
-        "url": "https://api.flakehub.com/f/pinned/NixOS/nixpkgs/0.2605.1017341%2Brev-08d3a97586f6b6343b3b5e799980773629432610/01a1862a-1e06-7d70-82dc-9884eae7724f/source.tar.gz"
+        "url": "https://api.flakehub.com/f/pinned/NixOS/nixpkgs/0.2605.1017455%2Brev-6f06d204d8f2d8761d9da78778745974a3216381/01a18de2-6c7d-72b1-98f5-c8cac00ed017/source.tar.gz"
       },
       "original": {
         "type": "tarball",
         "url": "https://flakehub.com/f/NixOS/nixpkgs/%2A"
-      }
-    },
-    "nixpkgs_2": {
-      "locked": {
-        "lastModified": 1793183032,
-        "narHash": "sha256-56mFMf8heLNfYhcgbrh4GpN5x+G9JOfTFXZC3n6w0qM=",
-        "rev": "08d3a97586f6b6343b3b5e799980773629432610",
-        "revCount": 1017341,
-        "type": "tarball",
-        "url": "https://api.flakehub.com/f/pinned/NixOS/nixpkgs/0.2605.1017341%2Brev-08d3a97586f6b6343b3b5e799980773629432610/01a1862a-1e06-7d70-82dc-9884eae7724f/source.tar.gz"
-      },
-      "original": {
-        "type": "tarball",
-        "url": "https://flakehub.com/f/NixOS/nixpkgs/%2A"
-      }
-    },
-    "readme": {
-      "inputs": {
-        "nixpkgs": "nixpkgs_2"
-      },
-      "locked": {
-        "lastModified": 1793324272,
-        "narHash": "sha256-dJ98HZK9cYEAyr5s0wWjz6E+AWfc4inqDNk5zQgfOGc=",
-        "owner": "BaseLayer-AI",
-        "repo": "baselayer-ai.github.io",
-        "rev": "062acab5d77860a698b2e83d39ac503ed22323a6",
-        "type": "github"
-      },
-      "original": {
-        "owner": "BaseLayer-AI",
-        "ref": "readme",
-        "repo": "baselayer-ai.github.io",
-        "type": "github"
       }
     },
     "root": {
       "inputs": {
-        "baselayer-ai-wasm-demo-aarch64-darwin": "baselayer-ai-wasm-demo-aarch64-darwin",
-        "readme": "readme"
+        "nixpkgs": "nixpkgs"
       }
     }
   },
